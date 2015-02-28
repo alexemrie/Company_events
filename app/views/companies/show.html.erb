@@ -1,0 +1,21 @@
+<h1>Upcoming Events for
+  <%= @company.name %>
+  </h5>
+    <%= link_to "Companies Index", companies_path %> /
+    <%= link_to "Edit Company", edit_company_path(@company) %>
+  <h5>
+</h1>
+<hr>
+
+
+<br>
+
+<% @company.events.each do |event| %>
+  <%= link_to event.name, company_event_path(@company, event) %>
+  <br>
+
+  <hr>
+<% end %>
+
+
+<%= link_to "New Event", new_company_event_path(@company) %>

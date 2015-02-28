@@ -1,0 +1,10 @@
+Event Name: <%= @event.name %>
+
+<br>
+
+Date <%= @event.date %>
+
+<hr>
+
+<%= link_to "Edit", edit_company_event_path(@company, @event) %>
+<%= link_to "Delete", company_event_path(@company, @event), method: "delete", data: {confirm: "Are you sure you want to delete this event?"} %>
